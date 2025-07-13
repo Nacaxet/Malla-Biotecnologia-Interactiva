@@ -1,0 +1,121 @@
+.materias-grid {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.cuatrimestre-columna {
+  display: flex;
+  flex-direction: column;
+  background: #f6f6fb;
+  border-radius: 24px;
+  padding: 18px 12px;
+  min-width: 250px;
+  max-width: 320px;
+  box-shadow: 0 2px 16px 2px #cfc5e560;
+  align-items: stretch;
+}
+
+.cuatrimestre-titulo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #6537ae;
+  background: #e9e3f5;
+  border-radius: 18px;
+  margin-bottom: 15px;
+  padding: 8px 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.materia-bubble {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  min-width: 120px;
+  min-height: 80px;
+  margin: 18px auto;
+  padding: 12px 18px;
+  transition: box-shadow 0.2s, border 0.2s, background 0.2s;
+  box-shadow: 0 1px 8px rgba(140,100,180,0.09);
+  position: relative;
+  user-select: none;
+  border-radius: 36px;
+  text-align: center;
+}
+
+.materia-bubble.bacteria {
+  border-radius: 80% 60% 60% 80%/60% 80% 80% 60%;
+}
+
+.materia-bubble.virus {
+  border-radius: 45% 70% 70% 45%/70% 45% 45% 70%;
+  box-shadow: 0 0 0 8px #b7aef350, 0 0 0 1px #b7aef3;
+}
+
+.materia-bubble .nombre {
+  font-weight: 600;
+  text-align: center;
+  color: #4f3868;
+  margin-bottom: 4px;
+}
+
+.materia-bubble .creditos {
+  font-size: 0.95rem;
+  color: #4e3e6e;
+  margin-top: 5px;
+}
+
+.materia-bubble.locked {
+  border: 3px dashed #969696 !important;
+  background: #e0e0e0 !important;
+  color: #969696 !important;
+  box-shadow: none !important;
+}
+
+.materia-bubble.aprobada {
+  color: #2c7557 !important;
+  font-weight: 700;
+}
+
+.credits-bar {
+  position: fixed;
+  top: 24px;
+  right: 18px;
+  z-index: 100;
+  background: linear-gradient(90deg, #c4f2d4 70%, #9a7ae1 100%);
+  border-radius: 2em 0 0 2em;
+  padding: 18px 38px 18px 22px;
+  box-shadow: 0 2px 15px #b7aef340;
+  color: #3d9b6d;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-left: 7px solid #b7aef3;
+  border-top: 2px solid #b0ebbe66;
+  border-bottom: 2px solid #b0ebbe66;
+}
+
+@media (max-width: 1000px) {
+  .materias-grid {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .cuatrimestre-columna {
+    min-width: 200px;
+    max-width: 98vw;
+    margin-bottom: 20px;
+  }
+  .credits-bar {
+    position: static;
+    margin-bottom: 18px;
+    border-radius: 2em;
+    width: 80vw;
+    text-align: center;
+  }
+}
